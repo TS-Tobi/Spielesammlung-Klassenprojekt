@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="Spielesammlung.MVVM.View.GamesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Spielesammlung.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock
+            Text="Discover"
+            Foreground="White"
+            FontSize="28"
+            HorizontalAlignment="Left"
+            Margin="0,0,0,20">
+
+        </TextBlock>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style 
+                    TargetType="{x:Type Border}">
+
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock
+                Text="Favourites"
+                Foreground="White"
+                FontSize="20"
+                HorizontalAlignment="Left"
+                Margin="0,0,0,10">
+
+            </TextBlock>
+
+            <StackPanel
+                    Orientation="Horizontal">
+                 <!--Spiel 1 aus Favoriten-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#365A08"
+                    CornerRadius="10"
+                    Margin="0">
+
+                    <Button Content="Tik Tak Toe"
+                            Foreground="White"
+                            FontSize="15"
+                            BorderBrush="Transparent">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  RecognizesAccessKey="True"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </Border>
+
+                <!--Spiel 2 aus Favoriten-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#5D9D0B"
+                    CornerRadius="10">
+
+                </Border>
+
+                <!--Spiel 3 aus Favoriten-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#72EB3A"
+                    CornerRadius="10">
+
+                </Border>
+
+                <!--Spiel 4 aus Favoriten-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#4eff91"
+                    CornerRadius="10">
+
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel>
+
+            <StackPanel.Resources>
+                <Style 
+                    TargetType="{x:Type Border}">
+
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+           
+            <TextBlock
+                Text="Most Playeded"
+                Foreground="White"
+                FontSize="20"
+                HorizontalAlignment="Left"
+                Margin="0,10,0,10">
+
+            </TextBlock>
+
+            <StackPanel
+                    Orientation="Horizontal">
+
+                <!--Spiel 1 aus Meist Gespielt-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#365A08"
+                    CornerRadius="10"
+                    Margin="0">
+
+                </Border>
+
+                <!--Spiel 2 aus Meist Gespielt-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#5D9D0B"
+                    CornerRadius="10">
+
+                </Border>
+
+                <!--Spiel 3 aus Meist Gespielt-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#72EB3A"
+                    CornerRadius="10">
+
+                </Border>
+
+                <!--Spiel 4 aus Meist Gespielt-->
+                <Border
+                    Width="150"
+                    Height="150"
+                    Background="#4eff91"
+                    CornerRadius="10">
+
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
